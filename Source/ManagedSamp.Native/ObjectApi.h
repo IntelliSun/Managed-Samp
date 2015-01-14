@@ -1,0 +1,35 @@
+#include "Api.h"
+
+INLINE_API_CALL int Api_CreateObject(int modelid, float x, float y, float z, float rX, float rY, float rZ, float DrawDistance);
+INLINE_API_CALL bool Api_AttachObjectToVehicle(int objectid, int vehicleid, float fOffsetX, float fOffsetY, float fOffsetZ, float fRotX, float fRotY, float fRotZ);
+INLINE_API_CALL bool Api_AttachObjectToObject(int objectid, int attachtoid, float fOffsetX, float fOffsetY, float fOffsetZ, float fRotX, float fRotY, float fRotZ, bool SyncRotation);
+INLINE_API_CALL bool Api_AttachObjectToPlayer(int objectid, int playerid, float fOffsetX, float fOffsetY, float fOffsetZ, float fRotX, float fRotY, float fRotZ);
+INLINE_API_CALL bool Api_SetObjectPos(int objectid, float x, float y, float z);
+INLINE_API_CALL bool Api_GetObjectPos(int objectid, float *x, float *y, float *z);
+INLINE_API_CALL bool Api_SetObjectRot(int objectid, float rotX, float rotY, float rotZ);
+INLINE_API_CALL bool Api_GetObjectRot(int objectid, float *rotX, float *rotY, float *rotZ);
+INLINE_API_CALL bool Api_IsValidObject(int objectid);
+INLINE_API_CALL bool Api_DestroyObject(int objectid);
+INLINE_API_CALL int Api_MoveObject(int objectid, float X, float Y, float Z, float Speed, float RotX, float RotY, float RotZ);
+INLINE_API_CALL bool Api_StopObject(int objectid);
+INLINE_API_CALL bool Api_IsObjectMoving(int objectid);
+INLINE_API_CALL bool Api_EditObject(int playerid, int objectid);
+INLINE_API_CALL bool Api_EditPlayerObject(int playerid, int objectid);
+INLINE_API_CALL bool Api_SelectObject(int playerid);
+INLINE_API_CALL bool Api_CancelEdit(int playerid);
+INLINE_API_CALL int Api_CreatePlayerObject(int playerid, int modelid, float x, float y, float z, float rX, float rY, float rZ, float DrawDistance);
+INLINE_API_CALL bool Api_AttachPlayerObjectToPlayer(int objectplayer, int objectid, int attachplayer, float OffsetX, float OffsetY, float OffsetZ, float rX, float rY, float rZ);
+INLINE_API_CALL bool Api_AttachPlayerObjectToVehicle(int playerid, int objectid, int vehicleid, float fOffsetX, float fOffsetY, float fOffsetZ, float fRotX, float fRotY, float RotZ);
+INLINE_API_CALL bool Api_SetPlayerObjectPos(int playerid, int objectid, float x, float y, float z);
+INLINE_API_CALL bool Api_GetPlayerObjectPos(int playerid, int objectid, float *x, float *y, float *z);
+INLINE_API_CALL bool Api_SetPlayerObjectRot(int playerid, int objectid, float rotX, float rotY, float rotZ);
+INLINE_API_CALL bool Api_GetPlayerObjectRot(int playerid, int objectid, float *rotX, float *rotY, float *rotZ);
+INLINE_API_CALL bool Api_IsValidPlayerObject(int playerid, int objectid);
+INLINE_API_CALL bool Api_DestroyPlayerObject(int playerid, int objectid);
+INLINE_API_CALL int Api_MovePlayerObject(int playerid, int objectid, float x, float y, float z, float Speed, float RotX, float RotY, float RotZ);
+INLINE_API_CALL bool Api_StopPlayerObject(int playerid, int objectid);
+INLINE_API_CALL bool Api_IsPlayerObjectMoving(int playerid, int objectid);
+INLINE_API_CALL bool Api_SetObjectMaterial(int objectid, int materialindex, int modelid, const char *txdname, const char *texturename, int materialcolor);
+INLINE_API_CALL bool Api_SetPlayerObjectMaterial(int playerid, int objectid, int materialindex, int modelid, const char *txdname, const char *texturename, int materialcolor);
+INLINE_API_CALL bool Api_SetObjectMaterialText(int objectid, const char *text, int materialindex, int materialsize, const char *fontface, int fontsize, bool bold, int fontcolor, int backcolor, int textalignment);
+INLINE_API_CALL bool Api_SetPlayerObjectMaterialText(int playerid, int objectid, const char *text, int materialindex, int materialsize, const char *fontface, int fontsize, bool bold, int fontcolor, int backcolor, int textalignment);
