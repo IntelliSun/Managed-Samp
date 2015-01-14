@@ -1,0 +1,7 @@
+EXPORTS
+	Supports
+	Load
+	Unload
+	OnGameModeInit
+	OnPlayerConnect
+	ProcessTick
