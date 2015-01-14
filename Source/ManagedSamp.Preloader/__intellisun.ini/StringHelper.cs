@@ -54,9 +54,9 @@ namespace IntelliSun
                 : tokens.Aggregate(format, (current, t) => current.Replace(String.Format(template, t.Key), t.Value));
         }
 
-        public static bool Contains(this string i, params char[] chars)
+        public static bool Contains(this string i, char[] chars)
         {
-            return chars.All(c => i.Contains(c));
+            return chars.All(i.Contains);
         }
     }
 }

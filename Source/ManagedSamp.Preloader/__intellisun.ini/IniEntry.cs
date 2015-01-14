@@ -131,7 +131,7 @@ namespace IntelliSun.IO
 
         private void UpdateKey(string key)
         {
-            if (key.Contains(' ', '=' ))
+            if (key.Contains(new[] { ' ', '=' }))
                 throw new ArgumentException("Argument may only contain letters, numbers and '_'", key);
 
             this.key = key;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 
 namespace ManagedSamp.Preloader
 {
@@ -26,7 +27,7 @@ namespace ManagedSamp.Preloader
                 {
                     var attributes = methodInfo.GetCustomAttributes();
                     var query = attributes.Any(attribute => {
-                        var attributeType = attributes.GetType();
+                        var attributeType = attribute.GetType();
                         return attributeType.Name == "PreloaderEntryPoint" ||
                                attributeType.GUID == _entryPointAttributeGuid;
                     });

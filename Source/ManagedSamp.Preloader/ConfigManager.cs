@@ -20,7 +20,12 @@ namespace ManagedSamp.Preloader
         public string GetBootstrapperPath()
         {
             var category = this.document.Categories.First();
-            return category == null ? null : category["Bootstrapper"].Value;
+            if (category == null)
+                return null;
+
+            var path = category["Bootstrapper"].Value;
+            var baseDirectory = Path.GetDirectoryName(this.document.Path);
+            return Path.IsPathRooted(path) ? path : Path.Combine(baseDirectory, path);
         }
 
         public static ConfigManager Find(params string[] searchDirectories)
